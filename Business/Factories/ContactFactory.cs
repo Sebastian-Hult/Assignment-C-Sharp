@@ -4,5 +4,5 @@ namespace Business.Factories;
 
 public static class ContactFactory
 {
-    public static Contact CreateNewContact => new();
+    public static Contact CreateNewContact() => new();
 }
