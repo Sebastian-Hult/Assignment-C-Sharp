@@ -42,6 +42,7 @@ public class MenuDialog(IContactService contactService)
         
         Console.Clear();
         Console.WriteLine("---------- CREATE NEW CONTACT ----------");
+        Console.WriteLine();
         Console.WriteLine("To create a new Contact you need to input the following contact information: ");
         Console.Write("First Name: ");
         contacts.FirstName = Console.ReadLine()!;
@@ -73,6 +74,8 @@ public class MenuDialog(IContactService contactService)
 
         foreach (var contact in _contactService.GetAllContacts())
         {
+            Console.WriteLine("---------- ALL CONTACTS ----------");
+            Console.WriteLine();
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine($"Id: #{contact.Id}");
             Console.WriteLine($"Name: {contact.FirstName} {contact.LastName}");
@@ -83,5 +86,8 @@ public class MenuDialog(IContactService contactService)
             Console.WriteLine($"City: {contact.City} city");
             Console.WriteLine("------------------------------------------------");
         }
+
+        Console.Write("Press any key to return to the Main Menu!");
+        Console.ReadKey();
     }
 }
