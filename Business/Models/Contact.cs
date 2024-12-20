@@ -1,5 +1,6 @@
 ﻿namespace Business.Models;
 
+// This class represents a contact with the following properties: Id, FirstName, LastName, Email, PhoneNumber, Address, ZipCode, City
 public class Contact
 {
     public string Id { get; set; } = null!;
