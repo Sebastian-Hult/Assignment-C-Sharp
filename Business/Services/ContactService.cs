@@ -13,11 +13,12 @@ public class ContactService(ContactSerializer contactSerializer) : IContactServi
     // This field stores a list of contacts
     private List<Contact> _contacts = [];
 
-
-    // This method creates a new contact and adds it to the list of contacts
-    // It Generate a unique ID for the contact using the UniqueIdGenerator class
-    // Adds the contact to the new list of contacts
-    // Saves the updated list of contacts using the ContactSerializer class and return the result
+    /*
+    - This method creates a new contact and adds it to the list of contacts
+    - It Generate a unique ID for the contact using the UniqueIdGenerator class
+    - Adds the contact to the new list of contacts
+    - Saves the updated list of contacts using the ContactSerializer class and return the result
+    */
     public bool CreateContact(Contact contact)
     {
         
